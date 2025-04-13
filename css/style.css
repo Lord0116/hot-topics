@@ -261,7 +261,7 @@ figcaption {
 
   .masthead {
     display: flex;
-    background-image: url(img/masthead.jpg);
+    background-image: url(../img/masthead.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: left;
