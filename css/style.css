@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rowdies:wght@300;400;700&display=swap");
+
+/* 
+
+Colors: 
+-------------------
+Text color
+-------------------
+beige: #fce8c3
+
+
+-------------------
+Accent colors
+-------------------
+pink: #d31986
+orange: #fe7902
+
+-------------------
+Neutrals
+-------------------
+charcoal: #070707
+cream: #ffeccc
+
+============ Fonts ==============
+
+-------------------
+Headings
+-------------------
+"Rowdies", sans-serif;
+
+-------------------
+Body Text
+-------------------
+"Josefin Sans", sans-serif;
+
+============ Font sizes and Line height ==============
+
+Mobile View: 0.75rem
+Tablet View: 1rem
+Desktop View: 1.25rem
+
+Line height ratio has to be between 1.4 and 1.6
+
+============ Screen size ==============
+mobile:
+
+tablet:  35rem < 80rem
+
+dekstop: 80rem
+
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --acc1: #fe7902;
+  --acc2: #d31986;
+  --txt: #fce8c3;
+  --neu1: #070707;
+  --neu2: #ffeccc;
+  --bdfnt: "Josefin Sans", sans-serif;
+  --hdfnt: "Rowdies", sans-serif;
+}
+.wrapper {
+  margin: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--hdfnt);
+  padding-top: 1em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+figure img {
+  border: 3px solid var(--acc1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+figure img:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 15px rgba(254, 99, 2, 0.757);
+}
+
+body {
+  font-family: var(--bdfnt);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  background-color: black;
+  color: var(--txt);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4em;
+  max-width: 40%;
+  margin: auto;
+  transition: 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar::before {
+  content: " Hey Fellow Artisans, Welcome to my space!";
+  font-size: 1rem;
+  font-family: var(--hdfnt);
+  padding: 1em;
+  text-align: center;
+  color: var(--acc2);
+}
+
+.masthead {
+  display: none;
+}
+
+.size-control {
+  width: 100%;
+}
+
+.vid-links {
+  display: block;
+  color: var(--acc2);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+.vid-links:hover {
+  color: var(--acc1);
+  font-weight: 700;
+  transform: scale(0.98);
+}
+
+#start {
+  padding-top: 0;
+  margin-top: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.source {
+  text-decoration: none;
+  color: var(--acc2);
+  transition: all 0.2s ease-in-out;
+  display: block;
+}
+
+.source:hover {
+  color: var(--acc1);
+  transform: scaleX(0.98);
+}
+
+.home {
+  padding-top: 1em;
+  border-bottom: 1px solid var(--acc1);
+  padding-bottom: 2em;
+}
+
+.home h2,
+figcaption {
+  text-align: center;
+  color: var(--acc1);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0 0.2em 0;
+}
+
+.navbar a {
+  display: block;
+  text-decoration: none;
+  font-family: var(--bdfnt);
+  font-size: 1.3em;
+  color: var(--acc);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  transform: scale(1.1);
+  color: var(--acc1);
+}
+
+.portfolio {
+  width: 100%;
+}
+
+figcaption {
+  padding: 0.75em;
+  color: var(--acc2);
+}
+
+.portfolio-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--acc);
+  padding-bottom: 2em;
+}
+
+.portfolio-heading {
+  padding-bottom: 0.5em;
+  color: var(--acc1);
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.footicons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 1em;
+  color: var(--acc1);
+}
+
+/* ============ MEDIA QUERIES ================ */
+
+@media only screen and (min-width: 35rem) {
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .logo {
+    max-width: 25%;
+    margin: auto;
+    padding-bottom: 1em;
+  }
+
+  .masthead {
+    display: flex;
+    background-image: url(/ajax-html-partials/img/masthead.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: left;
+    align-items: center;
+    height: 43vh;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #00000000 -30%,
+      black 36%,
+      black 65%,
+      transparent 110%
+    );
+  }
+
+  .tagline {
+    font-family: var(--hdfnt);
+    padding: 1em;
+    font-size: 1.8em;
+    color: var(--acc2);
+    line-height: 1.2;
+    text-align: left;
+    margin-left: 3em;
+  }
+
+  .navbar::before {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: row;
+    gap: 4em;
+  }
+
+  .size-control {
+    max-width: 40%;
+    float: left;
+    padding: 0.2em 1.5em 0 0;
+  }
+  .home::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .portfolio-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .portfolio {
+    display: block;
+    flex: 0 0 calc(50% - 1em);
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  .wrapper {
+    max-width: 80%;
+    margin: auto;
+    padding: 2em 0;
+  }
+  body {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  .head-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    align-items: center;
+  }
+
+  .logo {
+    align-items: left;
+    margin: 0;
+    max-width: 6em;
+  }
+
+  .navbar {
+    gap: 2em;
+  }
+
+  .masthead {
+    height: 70vh;
+  }
+  .tagline {
+    font-size: 3rem;
+  }
+
+  .home h2 {
+    text-align: left;
+  }
+  .home figcaption {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .size-control {
+    width: 20%;
+  }
+  .home p {
+    float: right;
+    width: 80%;
+  }
+  .portfolio {
+    flex: 0 0 calc(30% - 1em);
+  }
+
+  .foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    padding-top: 0;
+  }
+}
